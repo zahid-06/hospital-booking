@@ -1,0 +1,56 @@
+:root{--bg:#f4f6f5;--ink:#16263a;--mute:#5c6b78;--line:#d3dbd8;--acc:#1f7a5c;--card:#fff;--bad:#b3392f}
+*{box-sizing:border-box}
+
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+
+header{background:var(--ink);color:#fff;padding:16px 20px;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between}
+
+h1{font:600 1.3rem Georgia,serif;margin:0}
+
+h2{font:600 1.1rem Georgia,serif;margin:28px 0 10px}
+
+nav button{font:inherit;color:#fff;background:none;border:0;border-bottom:2px solid transparent;padding:6px 10px;cursor:pointer}
+
+nav button.on{border-color:#7fd1b0}
+
+main{max-width:760px;margin:0 auto;padding:8px 20px 64px}
+
+label{display:block;font-weight:600;margin:12px 0 4px}
+
+input,select,textarea{font:inherit;width:100%;padding:10px;border:1px solid var(--line);background:var(--card);color:inherit}
+
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+
+.docs{display:grid;gap:8px;margin-top:10px}
+
+.doc{text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);padding:12px 14px;cursor:pointer}
+
+.doc small{display:block;color:var(--mute)}
+
+.doc.on{border:2px solid var(--acc);padding:11px 13px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px}
+
+.slot{font:inherit;padding:9px 0;border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
+
+.slot.on{background:var(--ink);color:#fff}
+
+.slot:disabled{border:1px dashed var(--line);color:var(--mute);text-decoration:line-through;cursor:not-allowed}
+
+.btn{font:inherit;font-weight:600;background:var(--acc);color:#fff;border:0;padding:11px 22px;cursor:pointer;margin-top:14px}
+
+.btn.sm{padding:6px 12px;margin:0;background:none;color:var(--bad);border:1px solid var(--bad)}
+
+.row{display:flex;gap:8px;align-items:flex-end}.row>div{flex:1}.row .btn{margin:0}
+
+.msg{color:var(--mute)}.err{color:var(--bad);min-height:1.4em;margin:8px 0 0}
+
+.ok{border-left:4px solid var(--acc);background:var(--card);padding:12px 16px;margin-top:16px}
+
+ul{list-style:none;margin:12px 0 0;padding:0}
+
+li{background:var(--card);border:1px solid var(--line);padding:12px 14px;margin-bottom:8px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+li small{display:block;color:var(--mute)}
+
+li.cx{opacity:.55}li.cx strong{text-decoration:line-through}

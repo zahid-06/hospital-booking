@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tumhara Mera Ham Sabka Hospital – Book an appointment</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Tumhara Mera Ham Sabka Hospital</h1>
+  <nav>
+    <button class="on" data-tab="book">Book</button>
+    <button data-tab="mine">My appointments</button>
+    <button data-tab="staff">Staff view</button>
+  </nav>
+</header>
+<main>
+<section id="book">
+  <h2>Doctor</h2>
+  <label for="spec">Specialty</label>
+  <select id="spec"><option value="">All specialties</option></select>
+  <div class="docs" id="docs"></div>
+
+  <h2>Date and time</h2>
+  <label for="date">Date</label>
+  <input type="date" id="date">
+  <div id="slots" style="margin-top:12px"><p class="msg">Choose a doctor and a date to see times.</p></div>
+
+  <h2>Patient details</h2>
+  <form id="f" novalidate>
+    <label for="name">Patient name</label><input id="name" autocomplete="name">
+    <label for="phone">Phone</label><input id="phone" type="tel" autocomplete="tel">
+    <label for="reason">Reason for visit (optional)</label><textarea id="reason" rows="2" maxlength="200"></textarea>
+    <p class="err" id="err" role="alert"></p>
+    <button class="btn" type="submit">Book appointment</button>
+  </form>
+  <div id="done" class="ok" hidden></div>
+</section>
+
+<section id="mine" hidden>
+  <h2>Find your appointments</h2>
+  <div class="row"><div><label for="mphone">Phone number used for booking</label><input id="mphone" type="tel"></div><button class="btn" id="mgo">Search</button></div>
+  <ul id="mlist"></ul>
+</section>
+
+<section id="staff" hidden>
+  <h2>Appointments by day</h2>
+  <div class="row"><div><label for="sdate">Date</label><input type="date" id="sdate"></div><button class="btn" id="sgo">Load</button></div>
+  <ul id="slist"></ul>
+</section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
